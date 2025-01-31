@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petshop Locator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="white" />
+  </head>
+  <body>
+    <section class="container">
+      <header class="cabecalho">
+        <h1 class="tituloSite">Localizador de Petshops</h1>
+      </header>
+
+      <div class="conteudo">
+
+        <div class="Seccao">
+          <h2 class="tituloSeccao">Cadastrar Petshop</h2>
+          <form class="formulario" id="petshop-form">
+            <input
+              type="text"
+              id="nome-petshop"
+              placeholder="Nome do Petshop"
+              required
+            />
+            <input type="text" id="latitude" placeholder="Latitude" required />
+            <input
+              type="text"
+              id="longitude"
+              placeholder="Longitude"
+              required
+            />
+            <button type="submit">Salvar</button>
+          </form>
+        </div>
+
+        <div class="Seccao">
+          <h2 class="tituloSeccao">Selecionar Petshop</h2>
+          <select id="lista-petshops">
+            <option value="">Selecione um Petshop</option>
+          </select>
+          <button id="mostrar-mapa">Mostrar no Mapa</button>
+        </div>
+
+        <div class="SeccaoMapa">
+          <h2 id="petshop-nome"></h2>
+          <iframe
+            id="mapa"
+            width="600"
+            height="400"
+            style="display: none"
+          ></iframe>
+        </div>
+
+      </div>
+
+      <footer>
+        <p>Petshop PWA - Localização</p>
+      </footer>
+    </section>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
